@@ -6,10 +6,40 @@
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
 </head>
 <body ng-app='app'>
-	<a ui-sref='blog'>blog</a>
-	<a ui-sref='dashboard'>dashboard</a>
+	<nav class='navbar navbar-default'>
+		<div class='container-fluid'>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class='navbar-header'>
+				<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#nav-links' aria-expanded='false'>
+					<span class='sr-only'>Toggle navigation</span>
+					<span class='icon-bar'></span>
+					<span class='icon-bar'></span>
+					<span class='icon-bar'></span>
+				</button>
+			</div>
+			<div class='collapse navbar-collapse' id='nav-links'>
+				<ul class='nav navbar-nav'>
+					<li>
+						<a ui-sref='blog'>Blog</a>
+					</li>
+					<li>
+						<a ui-sref='pictures'>Pictures</a>
+					</li>
+					<li>
+						<a ui-sref='how-to'>HowTo</a>
+					</li>
+					<li>
+						<a ui-sref='dashboard'>Admin Dashboard</a>
+					</li>
+				</ul>
+			</div>
+		</div> 
+	</nav>
+
 	<section ui-view></section>
 
+	<script src='/lib/jquery/dist/jquery.js'></script>
+	<script src='/lib/bootstrap/dist/js/bootstrap.js'></script>
 	<script src='/lib/angular/angular.js'></script>
 	<script src='/lib/angular-ui-router/release/angular-ui-router.js'></script>
 	<script src='/app/app.module.js'></script>
