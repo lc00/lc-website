@@ -5,11 +5,15 @@
 		.module('app.blog')
 		.controller('Blog', Blog);
 
-	Blog.$inject = [];
+	Blog.$inject = ['blogs'];
 
-	function Blog(){
+	function Blog(blogs){
 		var vm = this;
-		vm.greeting = 'greeting from blog';
+
+		vm.blogArr = blogs.data;
+
+
+
 	};
 
 
