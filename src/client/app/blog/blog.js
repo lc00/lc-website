@@ -10,7 +10,7 @@
 	function Blog(blogs){
 		var vm = this;
 
-		vm.blogStuff = blogs.data;
+		vm.blogArr = blogs.data;
 
 
 
