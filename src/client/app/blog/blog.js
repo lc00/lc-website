@@ -12,7 +12,7 @@
 
 		vm.blogArr = blogs.data;
 
-
+		vm.testing = 'testing';
 
 	};
 

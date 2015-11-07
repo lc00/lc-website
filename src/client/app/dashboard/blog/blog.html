@@ -1,1 +1,25 @@
 <div>this is the blog section under dashboard</div>
+
+<table>
+	<tr>
+		<th class='border'>Title</th>
+		<th class='border'>Date</th>
+	</tr>
+	<tr ng-repeat='blog in vm.blogArr'>
+<!-- 
+		<td ng-model='blog.title'></td>
+	  <td ng-model='blog.date'></td> 
+	
+ -->
+		<td class='border'>
+			{{blog.title}}
+			<div>			
+				<a ui-sref='edit' class='btn btn-default'>Edit</a>
+				<a ui-sref='trash' class='btn btn-default'>Trash</a>
+			</div>	
+			
+		</td>
+		<td class='border'>{{blog.date}}</td>
+	</tr>
+</table>	
+

@@ -6,7 +6,7 @@
 	Dashboard.$inject = [];
 
 	function Dashboard(){	
-		
+
 
 	}
 

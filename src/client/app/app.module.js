@@ -5,7 +5,8 @@
 		// 'app.auth',
 		'app.blog',
 		'app.core',
-		'app.dashboard'
+		'app.dashboard',
+		'app.dashboard.blog'
 	]);
 
 	app.config(function($stateProvider, $urlRouterProvider){
@@ -28,6 +29,12 @@
 				url: '/dashboard',
 				controller: 'Dashboard',
 				controllerAs: 'vm',
+				templateUrl: 'app/dashboard/dashboard.html'
+			})
+			.state('dashboard.blog', {
+				url: '/blog',
+				controller: 'DashboardBlog',
+				controllerAs: 'vm',
 				resolve: {
 					blogs: function(dataservice){
 						return { 
@@ -35,10 +42,6 @@
 						}
 					}
 				},
-				templateUrl: 'app/dashboard/dashboard.html'
-			})
-			.state('dashboard.blog', {
-				url: '/blog',
 				templateUrl: 'app/dashboard/blog/blog.html'
 			})
 			.state('dashboard.picture', {
@@ -48,6 +51,14 @@
 			.state('dashboard.howto', {
 				url: '/howto',
 				templateUrl: 'app/dashboard/howto/howto.html'
+			})
+			.state('edit', {
+				url: '/edit',
+				templateUrl: 'app/dashboard/edit.html'
+			})
+			.state('trash', {
+				url: '/trash',
+				templateUrl: 'app/dashboard/trash.html'
 			});
 	});
 
