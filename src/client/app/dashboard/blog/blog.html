@@ -1,9 +1,14 @@
 <div>this is the blog section under dashboard</div>
 
-<table>
+<table class='table table-striped'>
 	<tr>
-		<th class='border'>Title</th>
-		<th class='border'>Date</th>
+		<div class=''>
+			<button type='submit' class='btn btn-default'>Add</button>
+		</div>
+	</tr>
+	<tr>
+		<th class=''>Title</th>
+		<th class=''>Date</th>
 	</tr>
 	<tr ng-repeat='blog in vm.blogArr'>
 <!-- 
@@ -11,7 +16,7 @@
 	  <td ng-model='blog.date'></td> 
 	
  -->
-		<td class='border'>
+		<td class=''>
 			{{blog.title}}
 			<div>			
 				<a ui-sref='edit' class='btn btn-default'>Edit</a>
@@ -19,7 +24,6 @@
 			</div>	
 			
 		</td>
-		<td class='border'>{{blog.date}}</td>
+		<td class=''>{{blog.date}}</td>
 	</tr>
 </table>	
-

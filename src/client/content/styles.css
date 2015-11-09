@@ -21,3 +21,8 @@ a:active {
 .border {
 	border: 1px solid #D3D3D3;
 }
+
+.textbox-300 {
+	height: 300px !important;
+}
+

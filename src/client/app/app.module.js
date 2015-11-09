@@ -52,6 +52,10 @@
 				url: '/howto',
 				templateUrl: 'app/dashboard/howto/howto.html'
 			})
+			.state('create', {
+				url: '/create',
+				templateUrl: 'app/dashboard/create.html'
+			})
 			.state('edit', {
 				url: '/edit',
 				templateUrl: 'app/dashboard/edit.html'
