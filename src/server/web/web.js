@@ -5,7 +5,7 @@ var webRoutes = function(app){
 	app.use('/lib', express.static(__dirname + '/../../../bower_components'));
 	app.use(express.static(__dirname + '/../../client'));
 
-	// Our get request for viewing the main page
+	// GET request for viewing the main page
 	app.get('*', function(req, res){
 		var options = {
 			root: __dirname + '../../client/',

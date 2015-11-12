@@ -9,6 +9,10 @@
 		var vm = this;
 
 		vm.blogArr = blogs.data;
+
+		vm.edit = function(title){
+			
+		}
 	}
 
 })();

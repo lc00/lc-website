@@ -6,7 +6,9 @@
 		'app.blog',
 		'app.core',
 		'app.dashboard',
-		'app.dashboard.blog'
+		'app.dashboard.blog',
+		'app.widgets',
+		'app.edit'
 	]);
 
 	app.config(function($stateProvider, $urlRouterProvider){
@@ -52,17 +54,30 @@
 				url: '/howto',
 				templateUrl: 'app/dashboard/howto/howto.html'
 			})
-			.state('create', {
-				url: '/create',
-				templateUrl: 'app/dashboard/create.html'
+			.state('add', {
+				url: '/add',
+				// controller: 'Add',
+				templateUrl: 'app/dashboard/add.html'
 			})
 			.state('edit', {
-				url: '/edit',
+				url: '/edit/:blogId',
+				controller: 'Edit',
+				controllerAs: 'vm',	
+				resolve: {
+					blog: ['$stateParams', 'dataservice', function($stateParams, dataservice){
+						return dataservice.getBlog($stateParams.blogId);
+					}]
+
+				},
 				templateUrl: 'app/dashboard/edit.html'
 			})
 			.state('trash', {
 				url: '/trash',
 				templateUrl: 'app/dashboard/trash.html'
+			})
+			.state('publish', {
+				url: '/publish',
+				templateUrl: 'app/dashboard/publish.html'
 			});
 	});
 

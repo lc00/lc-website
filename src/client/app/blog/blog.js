@@ -14,7 +14,7 @@
 
 		vm.testing = 'testing';
 
-	};
+	}
 
 
 })();

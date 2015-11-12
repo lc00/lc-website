@@ -3,7 +3,7 @@
 <table class='table table-striped'>
 	<tr>
 		<div class=''>
-			<button type='submit' class='btn btn-default'>Add</button>
+				<a ui-sref='add' class='btn btn-default'>Add</a>
 		</div>
 	</tr>
 	<tr>
@@ -18,9 +18,13 @@
  -->
 		<td class=''>
 			{{blog.title}}
-			<div>			
-				<a ui-sref='edit' class='btn btn-default'>Edit</a>
+			<div>		
+				<!-- <button class='btn btn-default' ng-click='vm.edit(blog.title)'>Edit</button>	
+				<button>Cancel</button> -->
+				<a ui-sref='edit({blogId: blog.id})' class='btn btn-default'>Edit</a>
 				<a ui-sref='trash' class='btn btn-default'>Trash</a>
+<!-- 				<button lc-Edit>Edit</button>
+				<button lc-Cancel>Cancel</button> -->
 			</div>	
 			
 		</td>
